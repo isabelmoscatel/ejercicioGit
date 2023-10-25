@@ -1,2 +1,3 @@
 # ejercicioGit
-Ejercicio Git Paulina Chuga
+Paulina Chuga
+paulisa.1414@gmail.com
