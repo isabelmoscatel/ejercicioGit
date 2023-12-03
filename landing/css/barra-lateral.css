@@ -1,0 +1,38 @@
+.container-barra-lateral {
+    padding-top: 40vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    position: fixed;
+    align-items:center ;
+    z-index: 999;
+
+}
+
+.container-barra-lateral .rotate-text {
+    position: absolute;
+    font-weight: 600;
+    color: gray;
+    transform: rotate(90deg);
+    margin-left: 30px;
+}
+
+.container-barra-lateral .line {
+    position: relative;
+    margin-top: 50px;
+    margin-left: 30px;
+    height: 80px;
+    border-left: 2px solid gray;
+}
+ .container-barra-lateral img{
+    margin-left: 25px;
+    height: 15px;
+    margin-top: 10px;
+}
+
+@media (max-width: 753px) {
+    .container-barra-lateral{
+        display: none;
+    }
+}

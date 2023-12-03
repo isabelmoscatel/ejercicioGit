@@ -1,0 +1,362 @@
+/*Start: Main*/
+.main_section {
+    padding: 0 var(--padding-global);
+    height: 100vh;
+
+    /*BG*/
+    background: linear-gradient(rgba(4, 0, 0, .8), rgba(0, 0, 0, .4)),
+        url('../img/hero-image-bg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.main_section .main_section-container {
+    padding-top: 120px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 35%;
+}
+
+.main_section .main_section-busqueda-container {
+    display: flex;
+    justify-content: end;
+
+}
+
+.main_section .main_section-texto-container h1 {
+    padding-bottom: 30px;
+
+}
+
+/*Start: Seccion propiedades*/
+
+.seccion-propiedades {
+    padding: var(--padding-t-p) 0;
+    display: flex;
+}
+
+.seccion-propiedades-rent {
+    padding: var(--padding-t-p) 0;
+    display: flex;
+}
+
+
+
+.galeria-container {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow: hidden;
+
+    /*grid-template-columns: repeat(12,1fr);*/
+    gap: 20px;
+}
+
+.container-texto-columna {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+.container-botones-opciones {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.padding-rigth {
+    padding-left: 5%;
+    padding-right: 10%;
+}
+
+.padding-left {
+    padding-left: 10%;
+    padding-right: 5%;
+}
+
+.container-texto-servicios {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+
+}
+
+
+/*----------Start: Seccion DEVELOMPENTS-----------*/
+.section-developments {
+    padding: var(--padding-t-p) var(--padding-global);
+
+}
+
+.titulo-section-developments {
+    text-align: center;
+    padding-bottom: var(--padding-t-p);
+}
+
+.conatiner-imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3%;
+}
+
+.imagen-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.conatiner-imagenes-celular {
+    display: none;
+}
+
+.texto-imagen-card {
+
+    margin-top: -70px;
+    height: 70px;
+    padding: 5%;
+    background-color: white;
+
+}
+
+/*Servicios*/
+.seccion-servicios {
+    display: flex;
+    padding: var(--padding-t-p) var(--padding-global);
+    gap: 5%;
+}
+
+.imagen-container {
+    width: 60%;
+}
+
+.container-botones {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+}
+
+/*seccion formulario*/
+.section-formulario {
+    z-index: 1;
+    padding: var(--padding-t-p) var(--padding-global);
+}
+
+.container-formulario {
+    background-color: #26282B;
+    padding: 5% 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3%;
+
+}
+
+.container-inputs {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: end;
+    gap: 8%;
+
+}
+
+
+
+
+@media (max-width: 1321px) {
+    .conatiner-imagenes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2%;
+    }
+}
+
+/*MEDIA QUERY*/
+@media (max-width: 1092px) {
+
+    /*Seccion Propiedades*/
+    .container-botones-opciones {
+        gap: 10px;
+    }
+
+    .container-botones {
+        gap: 0;
+    }
+
+    .container-botones .button {
+        padding: 0px 0px;
+        border: none;
+
+    }
+
+    .container-botones .button a {
+        color: var(--color-ocre);
+    }
+
+    .container-botones .button a::before {
+        content: url('../img/flecha.png');
+        margin-right: 5px;
+
+    }
+
+    .container-botones .button-option {
+        display: none;
+    }
+}
+
+@media (max-width: 939px) {
+    .conatiner-imagenes-celular {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3%;
+    }
+
+    .conatiner-imagenes {
+        display: none;
+
+    }
+
+
+}
+
+@media (max-width: 820px) {
+
+
+    /*Seccion Propiedades*/
+    .seccion-propiedades {
+        flex-direction: column-reverse;
+        gap: 30px;
+
+    }
+
+    .seccion-propiedades-rent {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 0 30px 0;
+
+    }
+
+    .imagen-container {
+        width: 100%;
+    }
+
+    .container-texto-servicios {
+        width: 100%;
+        gap: 40px;
+    }
+
+    .seccion-servicios {
+        flex-direction: column-reverse;
+        gap: 30px;
+        padding: var(--padding-t-p) 0;
+
+    }
+
+    .texto-servicios {
+        padding: 0 var(--padding-global);
+    }
+
+    .container-texto-columna {
+        gap: 40px;
+        width: 100%;
+    }
+
+    .container-formulario {
+        grid-template-columns: 1fr;
+        gap: 5%;
+        padding: 60px 10%;
+    }
+
+    .container-inputs {
+        justify-items: start;
+        gap: 20px;
+    }
+
+    .button-container {
+        width: 100%;
+    }
+
+    .padding-rigth {
+        padding: 0 var(--padding-global);
+    }
+
+    .padding-left {
+        padding: 0var(--padding-global);
+    }
+
+    .galeria-container {
+        width: 100%;
+        direction: ltr;
+        padding-left: var(--padding-global);
+    }
+}
+
+@media (max-width: 600px) {
+    .conatiner-imagenes-celular {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3%;
+    }
+
+    .conatiner-imagenes {
+        display: none;
+
+    }
+
+    .texto-imagen-card {
+        color: white;
+        background-color: rgba(0, 0, 0, .0);
+        height: 100px;
+        margin-top: -100px;
+    }
+
+    .imagen-card-activa {
+        color: #000;
+        background-color: white !important;
+    }
+
+    .section-developments {
+        padding: 60px 0;
+        margin-bottom: 60px;
+    }
+
+    .titulo-section-developments {
+        padding: 0% var(--padding-global) 10% var(--padding-global);
+    }
+}
+
+@media (max-width: 400px) {
+
+    /*Main Section*/
+    .main_section .main_section-busqueda-container {
+        justify-content: center;
+    }
+
+    .main_section .main_section-container {
+        gap: 45%;
+    }
+
+    .container-texto-columna {
+        gap: 20px;
+
+    }
+
+    .titulo-section-developments {
+        text-align: left;
+    }
+
+    .texto-imagen-card {
+
+        height: 80px;
+        margin-top: -80px;
+    }
+
+    .section-developments {
+        padding: 60px 0;
+        margin-bottom: 100px;
+    }
+
+}

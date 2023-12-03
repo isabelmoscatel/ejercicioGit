@@ -1,0 +1,395 @@
+:root {
+    --color-gris: #B4B7B7;
+    --color-ocre: #DF991B;
+    --padding-global: 10%;
+    --padding-t-p: 60px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Estilo texto*/
+.blanco {
+    color: white;
+}
+
+.gris {
+    color: var(--color-gris);
+}
+
+.ocre {
+    color: var(--color-ocre);
+}
+
+
+p {
+    font-family: "brandon-grotesque", sans-serif;
+}
+
+h3 {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 25px;
+}
+
+.titulo {
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 1;
+}
+
+.subtitulo {
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.subtitulo-ocre {
+    color: var(--color-ocre);
+    font-family: 'Abhaya Libre', serif;
+    font-size: 20px;
+}
+
+.texto {
+    padding-top: 5%;
+    padding-right: 20%;
+}
+
+.padding-right-40px {
+    padding-right: 40px;
+}
+
+.padding-left-40px {
+    padding-left: 40px;
+}
+
+
+/*start Buttons*/
+.button-blanco {
+    display: inline;
+    padding: 10px 30px;
+    border: solid 1px white;
+    border-radius: 100px;
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.button-blanco a {
+    color: white;
+    text-decoration: none;
+}
+
+.button-blanco span {
+    fill: white;
+    padding-right: 12px;
+}
+
+.button {
+    display: inline;
+    padding: 10px 30px;
+    border: solid 1px black;
+    border-radius: 100px;
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.button a {
+    color: black;
+    text-decoration: none;
+}
+
+.button-option {
+    color: var(--color-gris);
+    text-decoration: none;
+    font-family: "brandon-grotesque", sans-serif;
+    fill: var(--color-gris);
+}
+
+.button-option:hover {
+    fill: var(--color-ocre);
+    color: var(--color-ocre);
+}
+
+.button-submit {
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--color-ocre);
+    width: 160px;
+    display: inline;
+    padding: 10px 30px;
+    border: solid 1px var(--color-ocre);
+    border-radius: 100px;
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.button-submit img {
+    display: none;
+}
+
+.container-input-busqueda {
+    display: flex;
+    width: 300px;
+}
+
+/*start Input*/
+.input-busqueda {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px 30px;
+    border: solid 1px white;
+    border-radius: 100px;
+    outline: none;
+}
+
+input.input-busqueda::placeholder {
+    color: white;
+    font-family: 'brandon-grotesque';
+    background-image: url(../img/lupa.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 10px;
+
+}
+
+.input-white {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px 30px;
+    border: solid 1px white;
+    border-radius: 100px;
+    outline: none;
+}
+
+input.input-white::placeholder {
+    color: white;
+    font-family: 'brandon-grotesque';
+}
+
+#name {
+    font-family: 'brandon-grotesque';
+    color: white;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+
+/*Card Galeria*/
+
+.cambiar-direccion {
+    direction: rtl;
+}
+
+.cambiar-direccion-ltr {
+    direction: ltr;
+}
+
+.galereia-card {
+    display: flex;
+    min-width: 250px;
+    max-width: 340px;
+    height: 370px;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.bg-galeria-card-1 {
+    /*BG*/
+    background-image: url('../img/ciudad1.jpg');
+
+}
+
+.bg-galeria-card-2 {
+    /*BG*/
+    background-image: url('../img/ciudad2.png');
+
+}
+
+.bg-galeria-card-3 {
+    /*BG*/
+    background-image: url('../img/ciudad3.png');
+
+}
+
+.bg-galeria-card-4 {
+    /*BG*/
+    background-image: url('../img/edificios.jpg');
+
+}
+
+.bg-galeria-card-5 {
+    /*BG*/
+    background-image: url('../img/casa_blanca.jpg');
+
+}
+
+.bg-galeria-card-6 {
+    /*BG*/
+    background-image: url('../img/casa.jpg');
+}
+
+.city {
+    font-family: 'Abhaya Libre', serif;
+}
+
+.active {
+    padding: 10px 20px !important;
+    background-color: white;
+    color: black !important;
+}
+
+.active p.city::before {
+    content: url('../img/castillo.png');
+    width: 10px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.galeria-texto {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+    padding: 20px 20px;
+    color: white;
+    transition: 0.3s;
+
+}
+
+
+.grow {
+    transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1000px) {
+    .titulo {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 864px) {
+    .titulo {
+        font-size: 45px;
+    }
+
+    .texto {
+        padding-right: 0;
+    }
+
+    .button {
+        padding: 0px 0px;
+        border: none;
+
+    }
+
+    .button a {
+        color: var(--color-ocre);
+    }
+
+    .button a::before {
+        content: url('../img/flecha.png');
+        margin-right: 0px;
+
+    }
+
+
+
+
+    .button-option {
+        display: none;
+    }
+
+}
+
+@media (max-width: 820px) {
+    #name{
+        padding: 0;
+        padding-bottom: 10px;
+        margin-left: 0;
+    }
+    .button-submit {
+        padding: 0px 0px;
+        border: none;
+        margin-left: -50px;
+
+    }
+
+    .button-submit .button {
+        color: var(--color-ocre);
+    }
+
+    .button-submit img {
+        display: inline;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .grow:hover {
+        transform: scale(1.0);
+    }
+
+}
+
+@media (min-width: 400px) {
+    .galeria-texto:hover {
+        padding: 10px 20px !important;
+        background-color: white;
+        color: black !important;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .titulo {
+        font-size: 35px;
+    }
+
+    .texto {
+        padding-right: 0;
+    }
+
+    .button-blanco {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-input-busqueda {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+
+    .active p.city::before {
+        content: url('');
+        margin-right: 0px;
+    }
+
+    .active {
+        padding: 20px 20px !important;
+        color: white !important;
+        background-color: rgba(0, 0, 0, 0);
+
+
+    }
+
+    .galeria-texto {
+        align-items: flex-start;
+    }
+
+
+
+}

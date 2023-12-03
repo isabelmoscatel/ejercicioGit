@@ -1,0 +1,105 @@
+:root {
+    --padding-page: 10%;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+p {
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+input[type=text] {
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 400;
+    outline: none;
+
+}
+
+.padding-page {
+    padding: 0% var(--padding-page);
+}
+
+.paddig-arriba{
+    padding-top: 100px;
+}
+
+.barra {
+    background-color: rgba(0, 0, 0, .8);
+    width: 100%;
+    position: fixed;
+    display: block;
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-bottom: solid white 1px;
+}
+
+.container-nav {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 4fr 1fr 2fr 1fr 1fr 2fr ;
+}
+
+.barra a {
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.barra-busqueda {
+    height: 50px;
+    border: solid 1px;
+    padding: 10px 20px;
+    display: inline;
+    
+    
+}
+
+.white-font {
+    color: white;
+
+
+}
+
+.gray-font {
+    color: #B4B7B7;
+}
+
+.titulo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 60px;
+    font-style: normal;
+}
+
+.sub-titulo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+    margin-bottom: -30px;
+
+}
+
+.hero {
+    
+    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .4)),
+        url('../img/hero-image-bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+}
