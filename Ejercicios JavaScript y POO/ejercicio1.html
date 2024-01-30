@@ -1,0 +1,33 @@
+<script>
+    let numeroDeElementos = parseInt(prompt("ingresa el número de elementos que deseas imprimir"));
+    let secuenciaFibonacci = [0, 1];
+
+
+    function fibonacci() {
+        for (let i = 0; i < numeroDeElementos-2; i++) {
+            let pos1 = secuenciaFibonacci.length - 1;
+            let pos2 = secuenciaFibonacci.length - 2;
+            let nuevoNumero = null;
+            nuevoNumero = secuenciaFibonacci[pos1] + secuenciaFibonacci[pos2];
+            secuenciaFibonacci.push(nuevoNumero);
+        }
+    }
+
+    function revisarNumero() {
+        if (numeroDeElementos > 2) {
+            console.log("Entra a seecuencia");
+            fibonacci();
+            console.log(secuenciaFibonacci);
+
+        } else if (numeroDeElementos == 2) {
+            console.log(secuenciaFibonacci);
+        } else if (numeroDeElementos == 1) {
+            console.log(secuenciaFibonacci[0]);
+        } else {
+            console.log("debes ingresar un número mayor a 0");
+            window.location.reload();
+        }
+    }
+
+    revisarNumero();
+</script>
