@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/b003baba41.js" crossorigin="anonymous"></script>
+    <script src="../recursos/login.js" defer></script>
+</head>
+
+<body>
+
+    <div class="login-container" id="loginForm"> 
+        <h2>Iniciar Sesión</h2>
+        <form action="#" method="post" >
+            <div class="form-group">
+                <label for="username">Usuario:</label>
+                <input type="text" id="usernameInput" name="username" required>
+            </div>
+            <div class="form-group">
+                <div>
+
+                    <label for="password">Contraseña:</label>
+                    <div style="display: flex;">
+                        <input type="password" id="inputPassword" name="password" required>
+
+                        <button type="button" id="togglePassword">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="alertaPassword">
+                <p><small id="textoAlerta">Contraseña o usuario incorrecto intenta con:</small>
+                <small>Usuario: usuario1 | Contaraseña: usuario1</small>
+                <small>Usuario: usuario2 | Contaraseña: usuario2</small></p>
+            </div>
+            <div class="form-group">
+                <button class="btn" type="submit" id="loginBtn">Iniciar Sesión</button>
+            </div>
+        </form>
+      
+    </div>
+    <div>
+        
+    </div>
+    
+
+</body>
+
+</html>

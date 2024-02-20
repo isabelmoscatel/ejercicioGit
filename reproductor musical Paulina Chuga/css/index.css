@@ -1,0 +1,207 @@
+body {
+    font-family: Outfit;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+.column-container {
+    display: flex;
+    width: 100%;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.column-1 {
+    background-color: #fce4ec;
+    padding-left: 10%;
+
+}
+
+.column-2 {
+    display: grid;
+    align-self: center;
+    justify-content: center;
+}
+
+
+/*ventana scroll*/
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    width: 80%;
+    height: 150px;
+    border-radius: 5px;
+    overflow-y: auto;
+    background-color: white;
+    padding: 8px;
+}
+
+.song-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.song-item {
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.song-box {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    background-color: white;
+}
+
+.song-details {
+    padding: 20px;
+}
+
+.song-info {
+    padding-right: 50px;
+}
+
+.info {
+    padding-bottom: 2px;
+}
+
+.info span {
+    font-size: 14px;
+}
+
+.labelCancion {
+    font-weight: bold;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+
+/*reproductor*/
+
+
+.btn-song {
+    margin-left: 10px;
+    background-color: ghostwhite;
+    border-radius: 3px;
+    border: none;
+    height: 30px;
+    width: 30px;
+    font-size: 16px;
+    color: #2C549D;
+}
+
+.btn-song:hover {
+    background-color: palevioletred;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-song:active {
+    background-color: rgb(189, 71, 110);
+
+}
+
+
+.search-section {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 10px;
+}
+
+.search {
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+    border: solid 1px lightgrey;
+
+}
+
+
+.btn {
+
+    margin: 4px;
+    background-color: lightblue;
+    border-radius: 3px;
+    border: none;
+
+}
+
+.btn svg {
+    scale: 0.6;
+    fill: white
+}
+
+.btn:hover {
+
+    background-color: palevioletred;
+    cursor: pointer;
+}
+
+.btn svg::hover {
+    fill: white;
+}
+
+
+.btn:active {
+    background-color: lightcoral;
+
+}
+
+.btnActivo {
+    background-color: lightcoral
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: ghostwhite;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #9cb1d8;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #2C549D;
+    ;
+}
+
+#reiniciarBtn {
+    background: none;
+    color: #2C549D;
+    border: none;
+}
+
+#reiniciarBtn:hover {
+
+    color: palevioletred;
+    cursor: pointer;
+}

@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    display: flex;
+    background-color: #fce4ec; /* Soft pink background */
+}
+
+.search-section {
+    padding: 20px;
+    width: 25%;
+}
+
+.song-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.play-btn, .like-btn, .add-btn {
+    margin-left: 10px;
+}
+
+.playlist-section {
+    padding: 20px;
+    width: 25%;
+}
+
+.liked-songs, .playlist-songs {
+    margin-bottom: 15px;
+}
+
+.song-modal {
+    padding: 20px;
+    width: 50%;
+    background-color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.song-details {
+    margin-top: 20px;
+}
+
+.controls button {
+    margin-right: 10px;
+}
+
