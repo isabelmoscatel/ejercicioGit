@@ -136,7 +136,7 @@ class Playlist {
 
     }
 
-     /*---------------Evento personalizado da play---------------*/
+    /*---------------Evento personalizado da play---------------*/
     onPlaySong(nameClass) {
         let btnPlay = document.getElementsByClassName(nameClass);
         for (let i = 0; i < btnPlay.length; i++) {
@@ -168,7 +168,7 @@ class Playlist {
 
 }
 
- /*---------------Clase Reproductor---------------*/
+/*---------------Clase Reproductor---------------*/
 class Reproductor {
     catalogoDeCanciones;
     currentCancion;
@@ -209,20 +209,20 @@ class Reproductor {
             new Cancion(26, "cancion26", "autor10", "duracion10", "album10", "año10", "genero10", "portadas/26.webp", "canciones/26.mp3"),
             new Cancion(27, "cancion27", "autor10", "duracion10", "album10", "año10", "genero10", "portadas/27.webp", "canciones/27.mp3"),
             new Cancion(28, "cancion28", "autor10", "duracion10", "album10", "año10", "genero10", "portadas/28.webp", "canciones/28.mp3"),
-            new Cancion(29, "cancion29", "autor10", "duracion10", "album10", "año10", "genero10", "portadas/29.webp", "canciones/29.mp3"),   
-            new Cancion(30, "cancion30", "autor10", "duracion10", "album10", "año10", "genero10", "portadas/30.webp", "canciones/30.mp3"),    
+            new Cancion(29, "cancion29", "autor10", "duracion10", "album10", "año10", "genero10", "portadas/29.webp", "canciones/29.mp3"),
+            new Cancion(30, "cancion30", "autor10", "duracion10", "album10", "año10", "genero10", "portadas/30.webp", "canciones/30.mp3"),
         ];
-        this.mostrarCanciones(this.catalogoDeCanciones);
         this.currentCancion = this.catalogoDeCanciones[numCurrentCancion];
         this.audio = new Audio;
         this.currentPlaylist = 'busqueda';
         this.favoritos = new Playlist('resFavoritos', []);
         this.myPlaylist = new Playlist('resPlaylist', []);
+        this.mostrarCanciones(this.catalogoDeCanciones);
         this.inicializarControles();
     }
 
     inicializarControles() {//Eventos
-         /*---------------Evento Buscar---------------*/
+        /*---------------Evento Buscar---------------*/
         let buscar = document.getElementById("btnBuscar");
         buscar.addEventListener("click", () => {
             this.buscarCancion(document.getElementById("inputBuscar").value);
@@ -241,7 +241,7 @@ class Reproductor {
         pause.addEventListener("click", () => {
             this.pauseCancion();
         })
-        
+
         /*---------------Evento Mute---------------*/
         let mute = document.getElementById("mute-btn");
         mute.addEventListener("click", () => {
@@ -283,7 +283,7 @@ class Reproductor {
 
         });
 
-         /*---------------Evento Personalizado---------------*/
+        /*---------------Evento Personalizado---------------*/
         document.addEventListener('eventRemove', (e) => {
             let id = e.detail.cancionId;
             let playlist = e.detail.actual;
@@ -294,9 +294,10 @@ class Reproductor {
 
         });
 
-         /*---------------Muestro todas las canciones de Buscar---------------*/
+        /*---------------Muestro todas las canciones de Buscar---------------*/
         let reiniciarBtn = document.getElementById('reiniciarBtn');
         reiniciarBtn.addEventListener("click", () => {
+            this.canciones.innerHTML == " ";
             this.mostrarCanciones(this.catalogoDeCanciones);
         })
 
@@ -336,17 +337,21 @@ class Reproductor {
 
     mostrarCanciones(arregloCanciones) {
         let canciones = document.getElementById("resBusqueda");
+    
         arregloCanciones.forEach(cancion => {
+            
+
             canciones.innerHTML += `
             <div class="song-box" dataIdCancion ='${cancion.id}'>
                     <div class="song-info cancion" dataIdCancion ='${cancion.id}' >${cancion.nombre} </div>
                     
-                    <button class="playBtn1 btn-song fa-solid fa-play" dataIdCancion ='${cancion.id}'></button>
+                    <button class="playBtn1 btn-song fa-solid fa-play"  dataIdCancion ='${cancion.id}'></button>
                     <button class="likeBtn btn-song fa-solid fa-heart" dataIdCancion ='${cancion.id}'></button>                
                     <button class="addBtn btn-song fa-solid fa-plus" dataIdCancion ='${cancion.id}'></button>
                    
                 </div>
             `;
+
         });
 
         let playBtn = document.getElementsByClassName("playBtn1");
@@ -430,7 +435,7 @@ class Reproductor {
         if (this.currentCancion !== undefined) {
             this.audio.play();
             this.cambiarPortada();
-        } 
+        }
     }
 
     pauseCancion() {
